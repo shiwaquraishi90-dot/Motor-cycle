@@ -7,7 +7,19 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" > <!-- Bootstrap 5 --> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" > <!-- Bootstrap Icons --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" >
+    <!-- Google Fonts --> 
+
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" >
+
+
+      <!-- Bootstrap 5 --> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+     <!-- Bootstrap Icons --> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" >
 </head>
 <body>
 
@@ -87,7 +99,404 @@
     </div>
 
 </section>
+
+
+<!-- =====================================================
+     SECTION 02 — MOTORCYCLE CAROUSEL
+====================================================== -->
+
+<section id="models" class="motorcycle-carousel-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="section-heading text-center">
+
+            <span class="section-label" data-reveal="down">
+                OUR MACHINES
+            </span>
+
+            <h2 data-reveal="down">
+                CHOOSE YOUR
+                <span>WEAPON.</span>
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+
+        <!-- Bootstrap Carousel -->
+        <div
+            id="motorcycleCarousel"
+            class="carousel slide motorcycle-carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="5000"
+        >
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+
+                <button
+                    type="button"
+                    data-bs-target="#motorcycleCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1">
+                </button>
+
+                <button
+                    type="button"
+                    data-bs-target="#motorcycleCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2">
+                </button>
+
+                <button
+                    type="button"
+                    data-bs-target="#motorcycleCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3">
+                </button>
+
+            </div>
+
+
+            <!-- Carousel Content -->
+            <div class="carousel-inner">
+
+
+                <!-- =========================
+                     SLIDE 01
+                ========================== -->
+
+                <div class="carousel-item active">
+
+                    <div class="row align-items-center">
+
+                        <!-- Motorcycle Image -->
+                        <div class="col-lg-7">
+
+                            <div class="carousel-image-wrapper">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=90"
+                                    alt="Nightfury 1000 superbike"
+                                    class="carousel-bike"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Motorcycle Information -->
+                        <div class="col-lg-5">
+
+                            <div class="carousel-content"
+                                 data-reveal="right">
+
+                                <span class="carousel-category">
+                                    RACING / SUPERBIKE
+                                </span>
+
+                                <h3>
+                                    NIGHTFURY
+                                    <span>1000</span>
+                                </h3>
+
+                                <p>
+                                    A precision-built superbike created
+                                    for riders who refuse to compromise.
+                                </p>
+
+
+                                <!-- Specifications -->
+                                <div class="carousel-specs">
+
+                                    <div class="carousel-spec">
+
+                                        <strong>210</strong>
+
+                                        <span>HP</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>998</strong>
+
+                                        <span>CC</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>320</strong>
+
+                                        <span>KM/H</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="#featured"
+                                    class="btn premium-btn primary-btn"
+                                >
+                                    EXPLORE MODEL
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     SLIDE 02
+                ========================== -->
+
+                <div class="carousel-item">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-7">
+
+                            <div class="carousel-image-wrapper">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1600&q=90"
+                                    alt="Vortex R track motorcycle"
+                                    class="carousel-bike"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-5">
+
+                            <div class="carousel-content">
+
+                                <span class="carousel-category">
+                                    TRACK PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    VORTEX
+                                    <span>R</span>
+                                </h3>
+
+                                <p>
+                                    Built around aggressive aerodynamics,
+                                    razor-sharp handling and pure track DNA.
+                                </p>
+
+
+                                <div class="carousel-specs">
+
+                                    <div class="carousel-spec">
+
+                                        <strong>198</strong>
+
+                                        <span>HP</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>899</strong>
+
+                                        <span>CC</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>305</strong>
+
+                                        <span>KM/H</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="#collection"
+                                    class="btn premium-btn primary-btn"
+                                >
+                                    VIEW VORTEX
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     SLIDE 03
+                ========================== -->
+
+                <div class="carousel-item">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-7">
+
+                            <div class="carousel-image-wrapper">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1600&q=90"
+                                    alt="Apex 900 street motorcycle"
+                                    class="carousel-bike"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-5">
+
+                            <div class="carousel-content">
+
+                                <span class="carousel-category">
+                                    STREET PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    APEX
+                                    <span>900</span>
+                                </h3>
+
+                                <p>
+                                    Street-bred performance with the
+                                    precision of a machine built for
+                                    the open road.
+                                </p>
+
+
+                                <div class="carousel-specs">
+
+                                    <div class="carousel-spec">
+
+                                        <strong>165</strong>
+
+                                        <span>HP</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>900</strong>
+
+                                        <span>CC</span>
+
+                                    </div>
+
+
+                                    <div class="carousel-spec">
+
+                                        <strong>280</strong>
+
+                                        <span>KM/H</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="#collection"
+                                    class="btn premium-btn primary-btn"
+                                >
+                                    VIEW APEX
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Previous Button -->
+            <button
+                class="carousel-control-prev custom-carousel-control"
+                type="button"
+                data-bs-target="#motorcycleCarousel"
+                data-bs-slide="prev"
+            >
+
+                <span class="carousel-control-prev-icon"></span>
+
+                <span class="visually-hidden">
+                    Previous
+                </span>
+
+            </button>
+
+
+            <!-- Next Button -->
+            <button
+                class="carousel-control-next custom-carousel-control"
+                type="button"
+                data-bs-target="#motorcycleCarousel"
+                data-bs-slide="next"
+            >
+
+                <span class="carousel-control-next-icon"></span>
+
+                <span class="visually-hidden">
+                    Next
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
     </main>
+
+
+
+
+
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
