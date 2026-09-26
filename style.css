@@ -1,0 +1,561 @@
+/* =====================================================
+   SECTION 01 — CINEMATIC HERO
+====================================================== */
+
+:root {
+    --red: #e50914;
+    --dark-red: #a80009;
+    --black: #050505;
+    --dark: #0b0b0d;
+    --dark-2: #111114;
+    --dark-3: #17171a;
+    --white: #ffffff;
+    --gray: #9b9ba0;
+    --border: rgba(255, 255, 255, 0.10);
+
+    --display-font: "Barlow Condensed", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+
+
+/* HERO */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #050505;
+    isolation: isolate;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(229, 9, 20, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            110deg,
+            #050505 0%,
+            #0b0b0d 50%,
+            #050505 100%
+        );
+}
+
+.hero-red-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+    top: 30%;
+
+    background: rgba(229, 9, 20, 0.10);
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    z-index: -2;
+
+    animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+
+    from {
+        transform: translateY(-20px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 0.8;
+    }
+
+}
+
+
+/* CONTAINER */
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* LABEL */
+
+.premium-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--red);
+
+    font-family: var(--display-font);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* TITLE */
+
+.hero-title {
+    margin: 0;
+
+    max-width: 700px;
+
+    font-family: var(--display-font);
+
+    font-size: clamp(70px, 9vw, 145px);
+
+    font-weight: 800;
+
+    line-height: 0.85;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+.hero-title span {
+    display: block;
+    color: var(--red);
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 480px;
+
+    margin-top: 30px;
+    margin-bottom: 35px;
+
+    color: var(--gray);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* PREMIUM BUTTON */
+
+.premium-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    border-radius: 0;
+
+    overflow: hidden;
+
+    font-family: var(--body-font);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease;
+
+    z-index: 1;
+}
+
+
+/* Button shine */
+
+.premium-btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+
+    z-index: -1;
+}
+
+.premium-btn:hover::before {
+    left: 140%;
+}
+
+
+/* Primary */
+
+.primary-btn {
+    background: var(--red);
+
+    border: 1px solid var(--red);
+
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background: #ff111c;
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(229, 9, 20, 0.25);
+}
+
+
+/* Outline */
+
+.outline-btn {
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: var(--white);
+}
+
+.outline-btn:hover {
+    background: var(--white);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+}
+
+
+/* MOTORCYCLE */
+
+.hero-bike-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 600px;
+
+    transform-style: preserve-3d;
+}
+
+.hero-bike-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 20%;
+
+    bottom: 15%;
+
+    background: rgba(229, 9, 20, 0.15);
+
+    filter: blur(60px);
+
+    border-radius: 50%;
+}
+
+.hero-bike {
+    position: relative;
+
+    width: 100%;
+    max-width: 750px;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    filter:
+        contrast(1.08)
+        saturate(0.9);
+
+    opacity: 0.95;
+
+    transform:
+        scale(0.98)
+        translateY(0);
+
+    transition:
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.6s ease;
+}
+
+.hero-bike:hover {
+    transform: scale(1.02);
+
+    filter:
+        contrast(1.12)
+        saturate(1);
+}
+
+
+/* SCROLL INDICATOR */
+
+.hero-scroll {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-family: var(--display-font);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    z-index: 5;
+}
+
+.hero-scroll i {
+    color: var(--red);
+
+    animation: scrollArrow 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+====================================================== */
+
+[data-reveal] {
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay: var(--delay, 0ms);
+}
+
+[data-reveal="down"] {
+    transform: translateY(-35px);
+}
+
+[data-reveal="up"] {
+    transform: translateY(30px);
+}
+
+[data-reveal="left"] {
+    transform: translateX(-35px);
+}
+
+[data-reveal="right"] {
+    transform: translateX(35px);
+}
+
+[data-reveal="scale"] {
+    transform: translateY(-25px) scale(0.98);
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+
+    transform:
+        translate(0)
+        scale(1);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-bike-wrapper {
+        min-height: 400px;
+        margin-top: 20px;
+    }
+
+    .hero-bike {
+        height: 400px;
+    }
+
+    .hero-red-glow {
+        right: -250px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .hero-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .premium-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-title {
+        font-size: clamp(58px, 18vw, 90px);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-top: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .premium-btn {
+        width: 100%;
+    }
+
+    .hero-bike-wrapper {
+        min-height: 300px;
+    }
+
+    .hero-bike {
+        height: 300px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+
+}
