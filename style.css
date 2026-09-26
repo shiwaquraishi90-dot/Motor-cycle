@@ -3214,3 +3214,386 @@ body {
 
 
 
+/* =========================
+   09 — POWERFUL CTA
+========================= */
+
+.cta-section {
+    position: relative;
+    min-height: 620px;
+    padding: 120px 0;
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(229, 9, 20, 0.14),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #0b0b0d 50%,
+            #111114 100%
+        );
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Background texture */
+
+.cta-background {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+    background-size: 80px 80px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+/* Red atmospheric glow */
+
+.cta-red-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(229, 9, 20, 0.16);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Main CTA wrapper */
+
+.cta-wrapper {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 70px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Left red accent */
+
+.cta-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--red);
+    box-shadow: 0 0 35px rgba(229, 9, 20, 0.65);
+}
+
+/* Content */
+
+.cta-content {
+    position: relative;
+    z-index: 3;
+    width: 55%;
+}
+
+.cta-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--red);
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.cta-content h2 {
+    margin: 0;
+    max-width: 700px;
+    color: var(--white);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(3.2rem, 6vw, 6.5rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.cta-content h2 span {
+    display: block;
+    color: var(--red);
+}
+
+.cta-content p {
+    max-width: 520px;
+    margin: 28px 0 32px;
+    color: var(--gray);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Buttons */
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* Motorcycle */
+
+.cta-machine {
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    width: 52%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.cta-machine-glow {
+    position: absolute;
+    width: 420px;
+    height: 220px;
+    background: rgba(229, 9, 20, 0.15);
+    filter: blur(75px);
+    border-radius: 50%;
+}
+
+.cta-bike {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.85;
+    mix-blend-mode: screen;
+    filter:
+        contrast(1.1)
+        saturate(0.8)
+        brightness(0.72);
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 28%,
+        black 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 28%,
+        black 100%
+    );
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease;
+}
+
+.cta-wrapper:hover .cta-bike {
+    transform: scale(1.02);
+    opacity: 0.95;
+}
+
+/* =========================
+   CTA RESPONSIVE
+========================= */
+
+@media (max-width: 1199.98px) {
+
+    .cta-section {
+        padding: 100px 0;
+    }
+
+    .cta-wrapper {
+        padding: 60px 50px;
+    }
+
+    .cta-content {
+        width: 62%;
+    }
+
+    .cta-machine {
+        width: 48%;
+        right: -80px;
+    }
+
+    .cta-bike {
+        opacity: 0.65;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .cta-section {
+        min-height: auto;
+        padding: 90px 0;
+    }
+
+    .cta-wrapper {
+        min-height: 600px;
+        padding: 60px 40px;
+        align-items: flex-start;
+    }
+
+    .cta-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(3.5rem, 9vw, 5.5rem);
+    }
+
+    .cta-machine {
+        width: 80%;
+        height: 330px;
+        right: -80px;
+        bottom: -40px;
+    }
+
+    .cta-bike {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    .cta-wrapper {
+        min-height: 570px;
+        padding: 50px 28px;
+    }
+
+    .cta-wrapper::before {
+        width: 4px;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .cta-content p {
+        max-width: 100%;
+        margin: 22px 0 28px;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .cta-actions {
+        position: relative;
+        z-index: 5;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-actions .premium-btn {
+        width: auto;
+    }
+
+    .cta-machine {
+        width: 110%;
+        height: 280px;
+        right: -110px;
+        bottom: -35px;
+    }
+
+    .cta-bike {
+        opacity: 0.35;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 35%,
+            black 100%
+        );
+        mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 35%,
+            black 100%
+        );
+    }
+
+    .cta-red-glow {
+        width: 300px;
+        height: 300px;
+        right: -120px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-wrapper {
+        min-height: 540px;
+        padding: 45px 22px;
+    }
+
+    .cta-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+    }
+
+    .cta-content h2 {
+        font-size: clamp(2.7rem, 14vw, 4rem);
+        line-height: 0.92;
+    }
+
+    .cta-content p {
+        font-size: 0.85rem;
+    }
+
+    .cta-actions .premium-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-machine {
+        width: 125%;
+        right: -125px;
+        height: 250px;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cta-bike {
+        transition: none;
+    }
+
+    .cta-wrapper:hover .cta-bike {
+        transform: none;
+    }
+}
