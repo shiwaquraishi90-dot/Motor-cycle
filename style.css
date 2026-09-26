@@ -2560,3 +2560,351 @@ body {
     }
 }
 
+
+
+
+/* =========================
+   SECTION 07 — MOTORCYCLE COLLECTION
+========================= */
+
+.collection-section {
+    position: relative;
+    padding: 120px 0;
+    background: var(--black);
+    overflow: hidden;
+}
+
+.collection-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    top: 25%;
+    background: rgba(229, 9, 20, 0.05);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.collection-section::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -250px;
+    bottom: 5%;
+    background: rgba(229, 9, 20, 0.045);
+    filter: blur(110px);
+    pointer-events: none;
+}
+
+.collection-grid {
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+/* =========================
+   COLLECTION CARD
+========================= */
+
+.collection-card {
+    height: 100%;
+    background: var(--dark-2);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(229, 9, 20, 0.45);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   COLLECTION IMAGE
+========================= */
+
+.collection-image-box {
+    position: relative;
+    height: 310px;
+    overflow: hidden;
+    background: var(--dark-3);
+}
+
+.collection-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.collection-card:hover .collection-image {
+    transform: scale(1.035);
+    filter: brightness(1.08);
+}
+
+.collection-image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.1) 20%,
+            rgba(0, 0, 0, 0.78) 100%
+        );
+    pointer-events: none;
+}
+
+.collection-number {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.collection-type {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(5, 5, 5, 0.65);
+    font-family: "Inter", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+/* =========================
+   COLLECTION CONTENT
+========================= */
+
+.collection-content {
+    padding: 25px;
+}
+
+.collection-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.collection-category {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: var(--red);
+}
+
+.collection-content h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2.35rem;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: 0.5px;
+    color: var(--white);
+}
+
+.collection-content h3 span {
+    color: var(--red);
+}
+
+.collection-price {
+    white-space: nowrap;
+    padding-top: 4px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+/* Specs */
+
+.collection-specs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.collection-specs span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--gray);
+}
+
+/* Explore Link */
+
+.collection-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: var(--white);
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.collection-link i {
+    color: var(--red);
+    transition: transform 0.3s ease;
+}
+
+.collection-link:hover {
+    color: var(--red);
+}
+
+.collection-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* =========================
+   COLLECTION BOTTOM
+========================= */
+
+.collection-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+.collection-bottom p {
+    margin-bottom: 25px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gray);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199.98px) {
+    .collection-image-box {
+        height: 280px;
+    }
+
+    .collection-content {
+        padding: 22px;
+    }
+
+    .collection-content h3 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .collection-section {
+        padding: 90px 0;
+    }
+
+    .collection-grid {
+        margin-top: 50px;
+    }
+
+    .collection-image-box {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .collection-section {
+        padding: 75px 0;
+    }
+
+    .collection-grid {
+        margin-top: 40px;
+    }
+
+    .collection-image-box {
+        height: 260px;
+    }
+
+    .collection-number {
+        top: 15px;
+        left: 17px;
+        font-size: 2.1rem;
+    }
+
+    .collection-type {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .collection-content {
+        padding: 20px;
+    }
+
+    .collection-content h3 {
+        font-size: 2rem;
+    }
+
+    .collection-price {
+        font-size: 0.85rem;
+    }
+
+    .collection-specs span {
+        font-size: 0.55rem;
+    }
+
+    .collection-bottom {
+        margin-top: 50px;
+    }
+
+    .collection-bottom .premium-btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collection-card,
+    .collection-image,
+    .collection-link,
+    .collection-link i {
+        transition: none;
+    }
+
+    .collection-card:hover {
+        transform: none;
+    }
+
+    .collection-card:hover .collection-image {
+        transform: none;
+    }
+}
+
