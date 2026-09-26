@@ -2908,3 +2908,309 @@ body {
     }
 }
 
+/* =========================
+   SECTION 08 — RIDER TESTIMONIALS
+========================= */
+
+.testimonials-section {
+    position: relative;
+    padding: 120px 0;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    background: rgba(229, 9, 20, 0.045);
+    filter: blur(130px);
+    pointer-events: none;
+}
+
+.testimonials-grid {
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+/* =========================
+   TESTIMONIAL CARD
+========================= */
+
+.testimonial-card {
+    position: relative;
+    height: 100%;
+    padding: 32px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.012)
+        );
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 2px;
+    background: var(--red);
+    transition: width 0.35s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(229, 9, 20, 0.4);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.testimonial-card:hover::before {
+    width: 100%;
+}
+
+/* =========================
+   TESTIMONIAL TOP
+========================= */
+
+.testimonial-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-avatar {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid rgba(229, 9, 20, 0.45);
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.testimonial-person {
+    min-width: 0;
+}
+
+.testimonial-person h3 {
+    margin: 0 0 4px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--white);
+}
+
+.testimonial-person span {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    color: var(--gray);
+}
+
+.testimonial-quote {
+    margin-left: auto;
+    color: rgba(229, 9, 20, 0.65);
+    font-size: 2rem;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.testimonial-rating {
+    display: flex;
+    gap: 4px;
+    margin-top: 28px;
+}
+
+.testimonial-rating i {
+    font-size: 0.72rem;
+    color: var(--red);
+}
+
+/* =========================
+   TESTIMONIAL TEXT
+========================= */
+
+.testimonial-text {
+    min-height: 105px;
+    margin: 22px 0 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: #c5c5c8;
+}
+
+/* =========================
+   BIKE NAME
+========================= */
+
+.testimonial-bike {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.testimonial-bike span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gray);
+}
+
+.testimonial-bike strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--red);
+}
+
+/* =========================
+   TESTIMONIAL BOTTOM
+========================= */
+
+.testimonial-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 75px;
+}
+
+.testimonial-bottom-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.testimonial-bottom p {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--gray);
+}
+
+.testimonial-bottom p span {
+    color: var(--red);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991.98px) {
+    .testimonials-section {
+        padding: 90px 0;
+    }
+
+    .testimonials-grid {
+        margin-top: 50px;
+    }
+
+    .testimonial-card {
+        padding: 28px;
+    }
+
+    .testimonial-text {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .testimonials-section {
+        padding: 75px 0;
+    }
+
+    .testimonials-grid {
+        margin-top: 40px;
+    }
+
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+
+    .testimonial-avatar {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-person h3 {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-person span {
+        font-size: 0.48rem;
+        letter-spacing: 1px;
+    }
+
+    .testimonial-text {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .testimonial-bike strong {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-bottom {
+        margin-top: 50px;
+    }
+
+    .testimonial-bottom-line {
+        display: none;
+    }
+
+    .testimonial-bottom p {
+        width: 100%;
+        white-space: normal;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .testimonial-card,
+    .testimonial-card::before {
+        transition: none;
+    }
+
+    .testimonial-card:hover {
+        transform: none;
+    }
+}
+
+
+
