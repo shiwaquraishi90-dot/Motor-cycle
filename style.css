@@ -4035,3 +4035,12 @@ body {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+[data-reveal] {
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
