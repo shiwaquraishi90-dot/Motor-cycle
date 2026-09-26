@@ -1692,3 +1692,436 @@ body {
     }
 }
 
+
+
+/* =========================
+   SECTION 05 — TECHNOLOGY
+========================= */
+
+.technology-section {
+    position: relative;
+    padding: 120px 0;
+    background: var(--black);
+    overflow: hidden;
+}
+
+.technology-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    top: 20%;
+    background: rgba(229, 9, 20, 0.05);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.technology-section::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -250px;
+    bottom: 0;
+    background: rgba(229, 9, 20, 0.04);
+    filter: blur(110px);
+    pointer-events: none;
+}
+
+.technology-main {
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+/* =========================
+   TECHNOLOGY VISUAL
+========================= */
+
+.technology-visual {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--dark-2);
+}
+
+.technology-visual::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
+
+.technology-image-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(229, 9, 20, 0.13);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.technology-bike {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.technology-visual:hover .technology-bike {
+    transform: scale(1.025);
+    filter: brightness(1.05);
+}
+
+.technology-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.65)
+        );
+    pointer-events: none;
+}
+
+/* Technology Badge */
+
+.technology-badge {
+    position: absolute;
+    z-index: 4;
+    left: 35px;
+    bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 18px;
+    background: rgba(5, 5, 5, 0.82);
+    border: 1px solid rgba(229, 9, 20, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.technology-badge i {
+    font-size: 25px;
+    color: var(--red);
+}
+
+.technology-badge span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+/* =========================
+   TECHNOLOGY CONTENT
+========================= */
+
+.technology-content {
+    padding-left: 45px;
+}
+
+.technology-category {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--red);
+}
+
+.technology-content h3 {
+    margin: 0 0 25px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.technology-content h3 span {
+    display: block;
+    color: var(--red);
+}
+
+.technology-description {
+    max-width: 550px;
+    margin-bottom: 35px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--gray);
+}
+
+/* =========================
+   TECHNOLOGY FEATURES
+========================= */
+
+.technology-features {
+    border-top: 1px solid var(--border);
+}
+
+.technology-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    transition:
+        transform 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.technology-feature:hover {
+    transform: translateY(-3px);
+    padding-left: 5px;
+}
+
+.technology-feature-icon {
+    flex: 0 0 45px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    color: var(--red);
+    font-size: 18px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.technology-feature:hover .technology-feature-icon {
+    background: rgba(229, 9, 20, 0.08);
+    transform: translateY(-2px);
+}
+
+.technology-feature h4 {
+    margin: 0 0 6px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+.technology-feature p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--gray);
+}
+
+/* =========================
+   TECHNOLOGY STATS
+========================= */
+
+.technology-stats {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 80px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.technology-stat {
+    position: relative;
+    padding: 30px 25px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+}
+
+.technology-stat:last-child {
+    border-right: none;
+}
+
+.technology-stat strong {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+.technology-stat span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: var(--gray);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199.98px) {
+    .technology-content {
+        padding-left: 25px;
+    }
+
+    .technology-visual {
+        height: 540px;
+    }
+
+    .technology-content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .technology-section {
+        padding: 90px 0;
+    }
+
+    .technology-main {
+        margin-top: 50px;
+    }
+
+    .technology-visual {
+        height: 500px;
+        margin-bottom: 45px;
+    }
+
+    .technology-content {
+        padding-left: 0;
+    }
+
+    .technology-content h3 {
+        font-size: clamp(4rem, 10vw, 6rem);
+    }
+
+    .technology-stats {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .technology-section {
+        padding: 75px 0;
+    }
+
+    .technology-main {
+        margin-top: 40px;
+    }
+
+    .technology-visual {
+        height: 350px;
+    }
+
+    .technology-visual::before {
+        inset: 12px;
+    }
+
+    .technology-badge {
+        left: 20px;
+        bottom: 20px;
+        padding: 12px 14px;
+    }
+
+    .technology-badge i {
+        font-size: 20px;
+    }
+
+    .technology-badge span {
+        font-size: 0.65rem;
+    }
+
+    .technology-content h3 {
+        font-size: 3.8rem;
+    }
+
+    .technology-description {
+        font-size: 0.82rem;
+        line-height: 1.7;
+    }
+
+    .technology-feature {
+        gap: 13px;
+        padding: 17px 0;
+    }
+
+    .technology-feature-icon {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .technology-feature h4 {
+        font-size: 0.95rem;
+    }
+
+    .technology-feature p {
+        font-size: 0.72rem;
+    }
+
+    .technology-stats {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+
+    .technology-stat {
+        padding: 22px 10px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .technology-stat:nth-child(2) {
+        border-right: none;
+    }
+
+    .technology-stat:nth-child(3),
+    .technology-stat:nth-child(4) {
+        border-bottom: none;
+    }
+
+    .technology-stat strong {
+        font-size: 1.8rem;
+    }
+
+    .technology-stat span {
+        font-size: 0.55rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .technology-bike,
+    .technology-feature,
+    .technology-feature-icon {
+        transition: none;
+    }
+
+    .technology-visual:hover .technology-bike {
+        transform: none;
+    }
+
+    .technology-feature:hover {
+        transform: none;
+    }
+}
+
+
