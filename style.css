@@ -1077,3 +1077,255 @@ body {
 }
 
 
+/* =========================
+   SECTION 03 — PERFORMANCE
+========================= */
+
+.performance-section {
+    position: relative;
+    padding: 120px 0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(229, 9, 20, 0.08), transparent 35%),
+        var(--black);
+    overflow: hidden;
+}
+
+.performance-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(229, 9, 20, 0.05);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.performance-grid {
+    position: relative;
+    z-index: 2;
+    margin-top: 55px;
+}
+
+.performance-card {
+    position: relative;
+    min-height: 310px;
+    padding: 35px 25px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.045),
+        rgba(255, 255, 255, 0.015)
+    );
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.performance-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 2px;
+    background: var(--red);
+    transition: width 0.35s ease;
+}
+
+.performance-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(229, 9, 20, 0.45);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.performance-card:hover::before {
+    width: 100%;
+}
+
+.performance-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 1px solid rgba(229, 9, 20, 0.35);
+    color: var(--red);
+    font-size: 21px;
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.performance-card:hover .performance-icon {
+    transform: translateY(-3px);
+    background: rgba(229, 9, 20, 0.08);
+}
+
+.performance-number {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.performance-number .counter {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(3rem, 5vw, 4.7rem);
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.performance-number small {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--red);
+}
+
+.performance-card h3 {
+    margin: 18px 0 12px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+.performance-card p {
+    margin: 0;
+    color: var(--gray);
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+/* Performance Bottom */
+
+.performance-bottom {
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+    padding: 45px 50px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.performance-mini-label {
+    display: block;
+    margin-bottom: 12px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--red);
+}
+
+.performance-bottom h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+.performance-bottom h3 span {
+    color: var(--red);
+}
+
+/* Performance Responsive */
+
+@media (max-width: 991.98px) {
+    .performance-section {
+        padding: 90px 0;
+    }
+
+    .performance-card {
+        min-height: 290px;
+    }
+
+    .performance-bottom {
+        padding: 35px;
+    }
+
+    .performance-bottom .btn {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .performance-section {
+        padding: 75px 0;
+    }
+
+    .performance-grid {
+        margin-top: 40px;
+    }
+
+    .performance-card {
+        min-height: 270px;
+        padding: 25px 18px;
+    }
+
+    .performance-icon {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .performance-number .counter {
+        font-size: 3rem;
+    }
+
+    .performance-number small {
+        font-size: 0.95rem;
+    }
+
+    .performance-card h3 {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .performance-card p {
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+
+    .performance-bottom {
+        margin-top: 55px;
+        padding: 28px 20px;
+    }
+
+    .performance-bottom h3 {
+        font-size: 2.2rem;
+    }
+
+    .performance-bottom .btn {
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .performance-card,
+    .performance-icon,
+    .performance-card::before {
+        transition: none;
+    }
+
+    .performance-card:hover {
+        transform: none;
+    }
+}
