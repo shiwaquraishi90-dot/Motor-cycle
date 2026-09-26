@@ -2125,3 +2125,438 @@ body {
 }
 
 
+/* =========================
+   SECTION 06 — RIDING EXPERIENCE
+========================= */
+
+.experience-section {
+    position: relative;
+    padding: 120px 0;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.experience-background {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.95) 0%,
+            rgba(5, 5, 5, 0.65) 50%,
+            rgba(5, 5, 5, 0.95) 100%
+        );
+    pointer-events: none;
+}
+
+.experience-section::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -300px;
+    top: 10%;
+    background: rgba(229, 9, 20, 0.07);
+    filter: blur(130px);
+    pointer-events: none;
+}
+
+.experience-section::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: 5%;
+    background: rgba(229, 9, 20, 0.04);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.experience-main {
+    position: relative;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+/* =========================
+   EXPERIENCE IMAGE
+========================= */
+
+.experience-image-box {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--black);
+}
+
+.experience-image-box::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 4;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
+
+.experience-image-glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(229, 9, 20, 0.1);
+    filter: blur(100px);
+    pointer-events: none;
+}
+
+.experience-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.experience-image-box:hover .experience-image {
+    transform: scale(1.025);
+    filter: brightness(1.06);
+}
+
+.experience-image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05) 30%,
+            rgba(0, 0, 0, 0.78) 100%
+        );
+    pointer-events: none;
+}
+
+/* Image Location */
+
+.experience-location {
+    position: absolute;
+    z-index: 5;
+    left: 35px;
+    bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience-location i {
+    color: var(--red);
+    font-size: 18px;
+}
+
+.experience-location span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+/* Image Number */
+
+.experience-number {
+    position: absolute;
+    z-index: 5;
+    right: 35px;
+    top: 35px;
+}
+
+.experience-number span {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   EXPERIENCE CONTENT
+========================= */
+
+.experience-content {
+    padding-left: 55px;
+}
+
+.experience-category {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--red);
+}
+
+.experience-content h3 {
+    margin: 0 0 25px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.84;
+    letter-spacing: -1px;
+    color: var(--white);
+}
+
+.experience-content h3 span {
+    display: block;
+    color: var(--red);
+}
+
+.experience-description {
+    max-width: 520px;
+    margin: 0 0 35px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--gray);
+}
+
+/* =========================
+   EXPERIENCE POINTS
+========================= */
+
+.experience-points {
+    margin-bottom: 35px;
+    border-top: 1px solid var(--border);
+}
+
+.experience-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    transition:
+        transform 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.experience-point:hover {
+    transform: translateY(-3px);
+    padding-left: 5px;
+}
+
+.experience-point-number {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(229, 9, 20, 0.35);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.experience-point h4 {
+    margin: 0 0 6px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+.experience-point p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.77rem;
+    line-height: 1.6;
+    color: var(--gray);
+}
+
+/* =========================
+   EXPERIENCE QUOTE
+========================= */
+
+.experience-quote {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 90px auto 0;
+    padding: 45px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-quote i {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    color: var(--red);
+}
+
+.experience-quote p {
+    margin: 0 auto 15px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+.experience-quote span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199.98px) {
+    .experience-content {
+        padding-left: 30px;
+    }
+
+    .experience-image-box {
+        height: 540px;
+    }
+
+    .experience-content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .experience-section {
+        padding: 90px 0;
+    }
+
+    .experience-main {
+        margin-top: 50px;
+    }
+
+    .experience-image-box {
+        height: 500px;
+        margin-bottom: 45px;
+    }
+
+    .experience-content {
+        padding-left: 0;
+    }
+
+    .experience-content h3 {
+        font-size: clamp(4rem, 10vw, 6rem);
+    }
+
+    .experience-quote {
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .experience-section {
+        padding: 75px 0;
+    }
+
+    .experience-main {
+        margin-top: 40px;
+    }
+
+    .experience-image-box {
+        height: 350px;
+    }
+
+    .experience-image-box::before {
+        inset: 12px;
+    }
+
+    .experience-location {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .experience-location span {
+        font-size: 0.65rem;
+    }
+
+    .experience-number {
+        right: 20px;
+        top: 20px;
+    }
+
+    .experience-number span {
+        font-size: 3rem;
+    }
+
+    .experience-content h3 {
+        font-size: 3.8rem;
+    }
+
+    .experience-description {
+        font-size: 0.82rem;
+        line-height: 1.7;
+    }
+
+    .experience-point {
+        gap: 13px;
+        padding: 17px 0;
+    }
+
+    .experience-point-number {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .experience-point h4 {
+        font-size: 0.95rem;
+    }
+
+    .experience-point p {
+        font-size: 0.72rem;
+    }
+
+    .experience-content .premium-btn {
+        width: 100%;
+    }
+
+    .experience-quote {
+        margin-top: 50px;
+        padding: 35px 15px;
+    }
+
+    .experience-quote p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-image,
+    .experience-point {
+        transition: none;
+    }
+
+    .experience-image-box:hover .experience-image {
+        transform: none;
+    }
+
+    .experience-point:hover {
+        transform: none;
+    }
+}
+
