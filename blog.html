@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIDE X — Journal | Stories, Speed &amp; Motorcycle Culture</title>
+<meta name="description" content="The ultimate journal for sport bike enthusiasts. Racing insights, technology deep-dives, gear reviews and riding adventures.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAVBAR -->
+<!-- <nav class="navbar" id="navbar">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-4">
+      <a href="#" class="brand">RIDE<span>X</span></a>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Bikes</a></li>
+        <li><a href="#">Gear</a></li>
+        <li><a href="#" class="active">Blog </a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">About</a></li>
+      </ul> 
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a href="#" class="btn-red d-none d-md-inline-flex">
+        <i class="fas fa-motorcycle"></i> Book Test Ride
+      </a>
+      <button class="icon-btn mobile-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i> 
+      </button>
+    </div>
+  </div>
+</nav> -->
+
+<!-- PAGE HEAD -->
+<header class="page-head">
+  <div class="container">
+    <div class="breadcrumb-x reveal">
+      <a href="#">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span style="color:var(--red)">Journal</span>
+    </div>
+    <h1 class="reveal">Stories &amp; <span>Speed</span></h1>
+    <p class="reveal">
+      Dive deep into the world of sport bikes — racing insights, technology breakdowns,
+      gear reviews and unforgettable riding adventures from around the globe.
+    </p>
+    <div class="head-stats reveal">
+      <div class="head-stat"><b>248</b><small>Articles</small></div>
+      <div class="head-stat"><b>18K</b><small>Riders</small></div>
+      <div class="head-stat"><b>42</b><small>Contributors</small></div>
+      <div class="head-stat"><b>1.2M</b><small>Reads</small></div>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="section">
+  <div class="container">
+    <div class="layout">
+
+      <!-- MAIN COLUMN -->
+      <div class="main-col">
+
+        <!-- TOOLBAR -->
+        <div class="toolbar reveal">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles, tags, authors...">
+            <i class="fas fa-search"></i>
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="all"><span>All Posts</span></button>
+          <button class="filter-btn" data-filter="tech"><span>Technology</span></button>
+          <button class="filter-btn" data-filter="racing"><span>Racing</span></button>
+          <button class="filter-btn" data-filter="travel"><span>Travel</span></button>
+          <button class="filter-btn" data-filter="safety"><span>Safety</span></button>
+          <button class="filter-btn" data-filter="culture"><span>Culture</span></button>
+        </div>
+
+        <!-- FEATURED -->
+        <article class="featured reveal">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1400&auto=format&fit=crop" alt="Track Day" loading="lazy">
+          </div>
+          <div class="featured-body">
+            <span class="featured-tag">Featured · Performance</span>
+            <div class="meta">
+              <span><i class="far fa-calendar"></i> Oct 15, 2024</span>
+              <span><i class="far fa-clock"></i> 9 min read</span>
+              <span><i class="far fa-eye"></i> 12.4K views</span>
+            </div>
+            <h2>The Ultimate Guide to Track Days: Mastering the Apex</h2>
+            <p>
+              Taking your sport bike to the track is the ultimate adrenaline rush. In this comprehensive
+              guide, we break down braking points, body positioning, throttle control, and the mental
+              preparation needed to dominate every corner with confidence.
+            </p>
+            <a href="#" class="read">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- POSTS GRID -->
+        <div class="row g-4" id="postsGrid">
+ <div class="col-lg-6" data-cat="tech" data-date="20241012" data-views="8400">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Technology</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Oct 12, 2024</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <h4>Top 5 Modifications for Your Supersport</h4>
+                <p>Unlock the true potential of your machine. From slip-on exhausts to ECU flash tuning, we cover the modifications that actually make a difference.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=12" alt="">
+                    <span>Alex Parker</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6" data-cat="safety" data-date="20241010" data-views="6200">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Safety</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Oct 10, 2024</span>
+                  <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <h4>Rider Safety: Gear You Can't Ignore</h4>
+                <p>Your life depends on your gear. We put the latest ECE 22.06 helmets, CE Level 2 armor, and airbag vests through rigorous testing.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=32" alt="">
+                    <span>Sarah Mitchell</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6" data-cat="travel" data-date="20241008" data-views="9800">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Travel</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.pexels.com/photos/23524294/pexels-photo-23524294.jpeg?w=400">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Oct 8, 2024</span>
+                  <span><i class="far fa-clock"></i> 11 min read</span>
+                </div>
+                <h4>Exploring the Alps on a Sport Tourer</h4>
+                <p>A 2,000 km journey through the breathtaking Swiss and Italian Alps. Cold mornings, legendary passes, and why a sport tourer might be perfect.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=15" alt="">
+                    <span>Marco Rossi</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+ <div class="col-lg-6" data-cat="racing" data-date="20241005" data-views="11200">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Racing</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Oct 5, 2024</span>
+                  <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <h4>The Evolution of Aerodynamics in MotoGP</h4>
+                <p>Wings, spoilers, and wind tunnels. How MotoGP's obsession with downforce is trickling down to street bikes faster than you think.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=22" alt="">
+                    <span>James Cooper</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6" data-cat="tech" data-date="20241002" data-views="4500">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Maintenance</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Oct 2, 2024</span>
+                  <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+                <h4>Winter Maintenance Tips for Your Bike</h4>
+                <p>Don't let the cold ruin your ride. Essential steps to winterize your motorcycle — from battery tenders to fuel stabilizers and tire care.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=45" alt="">
+                    <span>Ryan Foster</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6" data-cat="culture" data-date="20240928" data-views="7300">
+            <article class="blog-card reveal">
+              <div class="img-wrap">
+                <span class="badge">Culture</span>
+                <div class="img-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+              </div>
+              <div class="blog-body">
+                <div class="meta">
+                  <span><i class="far fa-calendar"></i> Sep 28, 2024</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <h4>Why Naked Bikes Are Taking Over the Streets</h4>
+                <p>Stripped down, raw, and incredibly fun. We explore why the naked bike segment is exploding in popularity among younger riders.</p>
+                <div class="card-footer-x">
+                  <div class="author-chip">
+                    <img src="https://i.pravatar.cc/60?img=8" alt="">
+                    <span>Nina Hart</span>
+                  </div>
+                  <a href="#" class="read">Read <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+ <!-- PAGINATION -->
+        <div class="pagination-x reveal">
+          <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">…</button>
+          <button class="page-btn">12</button>
+          <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <!-- ABOUT WIDGET -->
+        <div class="widget reveal" style="text-align:center">
+          <img src="https://i.pravatar.cc/120?img=12" alt="" style="width:80px;height:80px;border-radius:50%;margin:0 auto 14px;border:3px solid var(--red)">
+          <h5 style="justify-content:center;margin-bottom:8px">Alex Parker</h5>
+          <p style="color:var(--muted);font-size:.82rem;line-height:1.7;margin-bottom:14px">
+            Editor-in-Chief · Track Day Addict · 15 years riding experience
+          </p>
+          <div class="social">
+            <a href="#" aria-label="Instagram" style="width:34px;height:34px;font-size:13px"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube" style="width:34px;height:34px;font-size:13px"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter" style="width:34px;height:34px;font-size:13px"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="widget reveal">
+          <h5><i class="fas fa-layer-group"></i> Categories</h5>
+          <ul class="cat-list">
+            <li><a href="#"><span>Technology</span><span class="count">24</span></a></li>
+            <li><a href="#"><span>Racing</span><span class="count">18</span></a></li>
+            <li><a href="#"><span>Travel</span><span class="count">32</span></a></li>
+            <li><a href="#"><span>Safety</span><span class="count">12</span></a></li>
+            <li><a href="#"><span>Maintenance</span><span class="count">9</span></a></li>
+            <li><a href="#"><span>Culture</span><span class="count">15</span></a></li>
+          </ul>
+        </div>
+
+        <!-- POPULAR -->
+        <div class="widget reveal">
+          <h5><i class="fas fa-fire"></i> Trending Now</h5>
+          <div class="pop-post">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=200&auto=format&fit=crop" alt="">
+            <div>
+              <h6>The Evolution of Aerodynamics in MotoGP</h6>
+              <div class="meta"><i class="far fa-eye"></i> 11.2K · Oct 5</div>
+            </div>
+          </div>
+          <div class="pop-post">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=200&auto=format&fit=crop" alt="">
+            <div>
+              <h6>Exploring the Alps on a Sport Tourer</h6>
+              <div class="meta"><i class="far fa-eye"></i> 9.8K · Oct 8</div>
+            </div>
+          </div>
+          <div class="pop-post">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=200&auto=format&fit=crop" alt="">
+            <div>
+              <h6>Top 5 Modifications for Your Supersport</h6>
+              <div class="meta"><i class="far fa-eye"></i> 8.4K · Oct 12</div>
+            </div>
+          </div>
+          <div class="pop-post">
+            <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=200&auto=format&fit=crop" alt="">
+            <div>
+              <h6>Why Naked Bikes Are Taking Over</h6>
+              <div class="meta"><i class="far fa-eye"></i> 7.3K · Sep 28</div>
+            </div>
+          </div>
+        </div>
+<!-- TAGS -->
+        <div class="widget reveal">
+          <h5><i class="fas fa-tags"></i> Popular Tags</h5>
+          <div class="tags">
+            <span class="tag">#Supersport</span>
+            <span class="tag">#MotoGP</span>
+            <span class="tag">#Exhaust</span>
+            <span class="tag">#Helmet</span>
+            <span class="tag">#Alps</span>
+            <span class="tag">#ECU</span>
+            <span class="tag">#Naked</span>
+            <span class="tag">#TrackDay</span>
+            <span class="tag">#Winterizing</span>
+            <span class="tag">#Aero</span>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="widget widget-nl reveal">
+          <i class="fas fa-motorcycle big"></i>
+          <h5>Ready to Ride?</h5>
+          <p>Join 18,000+ riders getting weekly stories, gear drops and event invites.</p>
+          <form id="nlForm">
+            <input type="email" placeholder="your@email.com" required>
+            <button type="submit" class="btn-red">Subscribe Free</button>
+          </form>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- <footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="#" class="brand mb-3 d-block">RIDE<span>X</span></a>
+        <p style="color:var(--muted);font-size:.88rem;line-height:1.8;max-width:340px">
+          Your ultimate destination for premium sport bikes, high-performance gear, and the
+          riding lifestyle. Built by riders, for riders.
+        </p>
+        <div class="social mt-3">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Bikes</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Gear Store</a></li>
+          <li><a href="#">Events</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">Press Kit</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-5 pt-4" style="border-top:1px solid var(--border);color:var(--muted);font-size:.83rem">
+      © 2024 RIDE X. All rights reserved. Designed with passion for the ride.
+    </div>
+  </div>
+</footer> -->
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+</body>
+
+<script src="script.js"></script>
+</html>
