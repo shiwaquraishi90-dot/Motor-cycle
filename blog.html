@@ -15,33 +15,55 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- NAVBAR -->
-<!-- <nav class="navbar" id="navbar">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center gap-4">
-      <a href="#" class="brand">RIDE<span>X</span></a>
-      <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Bikes</a></li>
-        <li><a href="#">Gear</a></li>
-        <li><a href="#" class="active">Blog </a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">About</a></li>
-      </ul> 
+<!--  NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top premium-navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand brand-logo" href="#home">
+            <span class="logo-icon">
+                <i class="fa-solid fa-motorcycle"></i>
+            </span>
+            <span>
+                RAVEN<span class="red">MOTORS</span>
+            </span>
+        </a>
+        <!-- Mobile Menu -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#motorcycles">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="shiwa.html">Contact</a>
+                </li>
+                <!-- Cart -->
+                <li class="nav-item ms-lg-4">
+                    <button
+                        class="cart-button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#cartOffcanvas">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge">2</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="d-flex align-items-center gap-2">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle Theme">
-        <i class="fas fa-moon"></i>
-      </button>
-      <a href="#" class="btn-red d-none d-md-inline-flex">
-        <i class="fas fa-motorcycle"></i> Book Test Ride
-      </a>
-      <button class="icon-btn mobile-toggle" aria-label="Menu">
-        <i class="fas fa-bars"></i> 
-      </button>
-    </div>
-  </div>
-</nav> -->
+</nav>
 
 <!-- PAGE HEAD -->
 <header class="page-head">
@@ -380,60 +402,81 @@
   </div>
 </main>
 
-<!-- FOOTER -->
-<!-- <footer>
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-4">
-        <a href="#" class="brand mb-3 d-block">RIDE<span>X</span></a>
-        <p style="color:var(--muted);font-size:.88rem;line-height:1.8;max-width:340px">
-          Your ultimate destination for premium sport bikes, high-performance gear, and the
-          riding lifestyle. Built by riders, for riders.
-        </p>
-        <div class="social mt-3">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+<footer id="about" class="footer">
+    <div class="container">
+        <div class="row g-5">
+            <!-- About -->
+            <div class="col-lg-4">
+                <a href="#" class="brand-logo footer-logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </span>
+                    RAVEN<span class="red">MOTORS</span>
+                </a>
+                <p>
+                    Premium motorcycles for people who refuse
+                    to ride ordinary. Built with attitude.
+                    Tuned for the road.
+                </p>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-6 col-lg-2">
+                <h4>EXPLORE</h4>
+                <a href="#home">Home</a>
+                <a href="#motorcycles">Motorcycles</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+            </div>
+            <!-- Contact -->
+            <div class="col-6 col-lg-2">
+                <h4>CONTACT</h4>
+                <a href="#location">Our Garage</a>
+                <a href="tel:+93700555555">Phone</a>
+                <a href="mailto:hello@ravenmotors.com">Email</a>
+                <a href="#contact">Support</a>
+            </div>
+            <!-- Newsletter -->
+            <div class="col-lg-4">
+                <h4>STAY IN THE FAST LANE</h4>
+                <p>
+                    Get new bike releases, events and garage news.
+                </p>
+                <form class="newsletter">
+                    <input
+                        type="email"
+                        placeholder="Your email address">
+                    <button type="submit">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-2 col-6">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Bikes</a></li>
-          <li><a href="#">Journal</a></li>
-          <li><a href="#">Gear Store</a></li>
-          <li><a href="#">Events</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-6">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Dealers</a></li>
-          <li><a href="#">Press Kit</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <h5>Support</h5>
-        <ul>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns &amp; Refunds</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
+        <div class="footer-bottom">
+            <span>
+                © 2026 Raven Motors. All rights reserved.
+            </span>
+            <span>
+                BUILT FOR THE BOLD
+                <i class="fa-solid fa-bolt red"></i>
+            </span>
+        </div>
     </div>
-    <div class="text-center mt-5 pt-4" style="border-top:1px solid var(--border);color:var(--muted);font-size:.83rem">
-      © 2024 RIDE X. All rights reserved. Designed with passion for the ride.
-    </div>
-  </div>
-</footer> -->
+</footer>
+ 
 
 <button class="back-top" id="backTop" aria-label="Back to top">
   <i class="fas fa-arrow-up"></i>
